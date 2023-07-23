@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
-    const activeStyle = 'bg-emerald-300 p-2';
+    const activeStyle = 'bg-emerald-300 rounded-md p-2';
 
     return (
         <nav className="flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light bg-white">
@@ -11,7 +11,7 @@ function Navbar() {
                        PeLists
                     </NavLink>
                 </li>
-                <li>
+                <li className="rounded-md p-2 hover:bg-emerald-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-100">
                     <NavLink 
                         to='/'
                         className={ ({ isActive }) => isActive ? activeStyle : undefined}
@@ -19,7 +19,7 @@ function Navbar() {
                         Home
                     </NavLink>
                 </li>
-                <li>
+                <li className="rounded-md p-2 hover:bg-emerald-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-100">
                     <NavLink 
                         to='/my-lists'
                         className={ ({ isActive }) => isActive ? activeStyle : undefined}
@@ -27,7 +27,7 @@ function Navbar() {
                         Mis PeLists
                     </NavLink>
                 </li>
-                <li>
+                <li className="rounded-md p-2 hover:bg-emerald-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-100">
                     <NavLink 
                         to='/create-list'
                         onClick={() => context.setSearchByCategory("women's clothing")}
@@ -44,10 +44,10 @@ function Navbar() {
                 </li>
                 <li>
                     <NavLink 
-                        to='/my-orders'
+                        to='/my-account'
                         className={ ({ isActive }) => isActive ? activeStyle : undefined}
                     >
-                        My Orders
+                        Mi cuenta
                     </NavLink>
                 </li>
             </ul>
